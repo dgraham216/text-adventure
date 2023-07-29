@@ -44,8 +44,7 @@ if start == 'risk life and limb':
             print('OR does it?')
             print('As you strain with might to hold your breath, you remember the bubble gum you have been chewing since this morning.')
             print('You quickly blow a large lavender bubble which pops and forms an oxygen releasing mask over your nose and mouth.')
-            print('You find yourself back in the tiny, steamy, sweltering room near the woodburning stove as if nothing ever happened')
-    if response == ''       
+            print('You find yourself back in the tiny, steamy, sweltering room near the woodburning stove as if nothing ever happened')      
 elif start == 'stay':
     print('Very well. Eternity is a very long time...')
     response = input('Have you changed your mind? ')
@@ -57,7 +56,7 @@ elif start == 'stay':
         print('To the south is a wall with one ordinary looking door.')
         print('To the west the wall is completely filled with a black glass window. You can not see out the window.')
         print('In the center of the room is a low table. On the table is a screw driver, a wood burning stove, a match, a hammer, a gas mask, and a knife ')
-    else: 
-        print('Death by sauna [ending 1/6 found] was a dumb way to die. Goodbye.')
-        quit()
+else: 
+    print('Death by sauna [ending 1/6 found] was a dumb way to die. Goodbye.')
+    quit()
     
