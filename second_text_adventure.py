@@ -21,11 +21,16 @@ def intro():
     print("Inside you find a screwdriver, a match, a wrapped piece of your favorite chewing gum, and a hammer.")
     print("Your stomach growls.  You might as well pop in that piece of chewing gum.")
     print()
+    intro2()
+
+
+def intro2():
+    print()
     print(" After munching for a bit on your gum, you believe you have four obvious options.")
     print("Option #1: Go north to the elevator door.")
     print("Option #2: Go east to the blocked door. Your screwdriver might work on that")
     print("Option #3: Go south to the barn door.")
-    print("Option #4: Go west to the black paned window.")
+    print("Option #4: Go west to the black paned window. Your hammer might break that.")
     print("Option #5: unknown at this point, but you hate to limit your options.")
     firstDecision = input("Which option will you chose? (1/2/3/4/5): \n>> ")
     if firstDecision == 1:
@@ -45,7 +50,14 @@ def intro():
         fire()
 
 def north():
-    print()
+    print('You walk north. This wall has a closed elevator door. An elevator button next to the door has an engraved arrow pointing down.') 
+    action = input('Do you want to push the elevator button? (y/n)\n>> ')
+    if action == 'y':
+        print('You feel a rumble - then the entire floor beneath you drops and you begin descending 3000ft into a lava filled cavern. [ending 2/6 found]')
+        print(' OR do you?')
+        print('You remember that you have a single use Rewind Button installed in the middle of your forehead and you smack it - HARD!')
+        print('You feel a tug of force from behind, and before you can blink, you find yourself back where you started a few minutes earlier.')
+
 
 
 def east():
@@ -117,3 +129,6 @@ if start == "stay":
     elif response == 'n':
         print()
         print("I thought you were open for an adventure? [Ending 1/6 Found]")
+elif start == "risk life and limb":
+    print()
+    intro()
