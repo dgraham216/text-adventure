@@ -19,7 +19,7 @@ def intro():
     print()
     print("Next you investigate the backpack. You pick it up and unbuckle the flap.")
     print("Inside you find a screwdriver, a match, a wrapped piece of your favorite chewing gum, and a hammer.")
-    print("Your stomach growls.  You might as well pop in that piece of chewing gum.")
+    print("Your stomach growls.  You might as well pop in that piece of chewing gum. This might take awhile.")
     print()
     intro2()
 
@@ -32,20 +32,20 @@ def intro2():
     print("Option #3: Go south to the barn door.")
     print("Option #4: Go west to the black paned window. Your hammer might break that.")
     print("Option #5: unknown at this point, but you hate to limit your options.")
-    firstDecision = input("Which option will you chose? (1/2/3/4/5): \n>> ")
-    if firstDecision == 1:
-        print()
+    firstDecision = input("Which option will you chose? 1/2/3/4/5 \n>> ")
+    if firstDecision == '1':
         north()
-    elif firstDecision == 2:
+        
+    elif firstDecision == '2':
         print()
         east()
-    elif firstDecision == 3:
+    elif firstDecision == '3':
         print()
         south()
-    elif firstDecision == 4:
+    elif firstDecision == '4':
         print()
         west()
-    elif firstDecision == 5:
+    elif firstDecision == '5':
         print()
         fire()
 
