@@ -1,62 +1,119 @@
-name = input('Enter your name: ')
-print(f'Salutations {name}!')
-start = input('You are locked in a tiny, enclosed, steamy, sweltering room. Would you like to [stay] in this room for eternity or [risk life and limb] to escape? ')
-if start == 'risk life and limb':
-    print('Very well. Let us begin')
-    print('To the north is a blank wall with a small disc that resembles an elevator button. An arrow just below it points down.')
-    print('To the east is a wall with one door, but the door is blocked by boards screwed into the door and wall')
-    print('To the south is a wall with one ordinary looking door.')
-    print('To the west the wall is completely filled with a black glass window. You can not see out the window.')
-    print('In the center of the room is a woodburning stove and a backpack containing a screwdriver, a match, and a hammer,')
-    response = input('Would you like to [go] a certain direction or [pick up bag]')
-    if response == 'go north':
-        print('You are at a blank wall with a small disc inserted in the center of the wall. It resembles an elevator button. An arrow just below it points down.') 
-        action = input('Do you want to [push] it? ')
-        if action == 'push':
-            print('The entire floor drops and you begin descending 3000ft into a lava filled cavern. [ending 2/6 found]')
-            print(' OR do you?')
-            print('You remember that you have a single use Rewind Button installed in the middle of your forehead and you smack it - hard!')
-            print('You find yourself back in the tiny, steamy, sweltering room near the woodburning stove as if nothing ever happened.')
-    if response == 'pick up bag':
-        print('You put the backpack on your back. ')
-    if response == 'go east':
-        print(' You are at a wall with one door, but the door is blocked by boards screwed into the door and wall')
-        remove = input('Would you like to use the screwdriver to [unscrew the boards]?')
-        if remove == 'unscrew the boards':
-            print('The boards fall to the floor.')
-            open = input('Would you like to [open the door]? ') 
-            if open == 'open the door':
-                print('When you turn the nob and tug the door open, you find a rocky volcanic wall that is extremely hot. You can not escape.')
-                print('You close the door quickly as the steam and heat eminating from the vocanic wall is too much to bear [Dead End 1/1 Found!]')
-    if response == 'go south':
-        print('You walk south to the ordinary looking door. With hope in your heart, you turn the knob and pull.')
-        print('You find a shimmery slimy bubble covering the doorway.')
-        print('The moment your finger reaches out, the bubble bursts, slime flies, and you are immediately zapped by giant electrical pincers of a metalic spider now framing the doorway. [Ending 2/4]')
-        print('OR is it.')
-        print('As you shake uncontrollably, and your eyes roll to the back of your head, your foot slips on some of the slime and you miraculously kick the spider back.')
-        print('Your head clears and you have just enough energy to roll to the side and slam the door shut ')
-        print('You find yourself back in the tiny, steamy, sweltering room near the woodburning stove as if nothing ever happened')
-    if response == 'go west':
-        print('You find yourself facing a large black glass window. You can ot see out the window.')
-        remove = input('Would you like to [use the hammer] in your bag to break the window? ')
-        if remove == 'use the hammer':
-            print('The black glass shatters and thick, green, poisonous gas begins to fill the room and your lungs [Ending 3/4 Found].')
-            print('OR does it?')
-            print('As you strain with might to hold your breath, you remember the bubble gum you have been chewing since this morning.')
-            print('You quickly blow a large lavender bubble which pops and forms an oxygen releasing mask over your nose and mouth.')
-            print('You find yourself back in the tiny, steamy, sweltering room near the woodburning stove as if nothing ever happened')      
-elif start == 'stay':
-    print('Very well. Eternity is a very long time...')
-    response = input('Have you changed your mind? ')
-    if response == 'yes':
-        print('Very well. Let us begin again.')
-        setting = input('Hit return to continue')
-        print('To the north is a blank wall with a small disc inserted in center of the wall. It resembles an elevator button. An arrow just below it points down.')
-        print('To the east is a wall with one door, but the door is blocked closed by boards screwed into the door and wall')
-        print('To the south is a wall with one ordinary looking door.')
-        print('To the west the wall is completely filled with a black glass window. You can not see out the window.')
-        print('In the center of the room is a low table. On the table is a screw driver, a wood burning stove, a match, a hammer, a gas mask, and a knife ')
-else: 
-    print('Death by sauna [ending 1/6 found] was a dumb way to die. Goodbye.')
-    quit()
+def intro():
+    print()
+    print("You stand in the center of a sweltering, tiny room next to a woodburning stove and a backpack")
+    print("You slowly turn in place")
+    print()
+    print("North wall: has a closed elevator door.  An elevator button next to the door has an engraved arrow pointing down.")
+    print()
+    print("East wall: has one simple wooden door, but the door is blocked by boards screwed horizontally into the door and wall")
+    print()
+    print("South wall: has what looks like a barn door.")
+    print()
+    print("West wall: is completely filled with a black glass window. You can not see out the window.")
+    print()
+    print("Before stepping towards any door or window, you decide to investigate the woodburning stove and the backpack at your feet.")
+    print("You reach out and touch the black iron stove and realize the sweltering heat in the room is not coming from here.")
+    print("You open the heavy door of the black iron stove and see unlit kindling and firewood piled inside.")
+    print("You note a black pipe rising up from the stove to the ceiling")
+    print("It is bolted in place")
+    print()
+    print("Next you investigate the backpack. You pick it up and unbuckle the flap.")
+    print("Inside you find a screwdriver, a match, a wrapped piece of your favorite chewing gum, and a hammer.")
+    print("Your stomach growls.  You might as well pop in that piece of chewing gum.")
+    print()
+    print(" After munching for a bit on your gum, you believe you have four obvious options.")
+    print("Option #1: Go north to the elevator door.")
+    print("Option #2: Go east to the blocked door. Your screwdriver might work on that")
+    print("Option #3: Go south to the barn door.")
+    print("Option #4: Go west to the black paned window.")
+    print("Option #5: unknown at this point, but you hate to limit your options.")
+    firstDecision = input("Which option will you chose? (1/2/3/4/5): \n>> ")
+    if firstDecision == 1:
+        print()
+        north()
+    elif firstDecision == 2:
+        print()
+        east()
+    elif firstDecision == 3:
+        print()
+        south()
+    elif firstDecision == 4:
+        print()
+        west()
+    elif firstDecision == 5:
+        print()
+        fire()
+
+def north():
+    print()
+
+
+def east():
+    print()
+
+
+def south():
+    print()
+
+
+def west():
+    print()
+
+
+def fire():
+    print()
+
+
+
+
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+print()
+print()
+print()
+print("          ##############################")
+print("          #                            #")
+print("          #      Title Here            #")
+print("          #                            #")
+print("          ##############################")
+print()
+print()
+print()
+print()
+name = input('Enter your name: ')
+print()
+print()
+print()
+print(f'Salutations {name}!')
+print("I hope you are game for an adventure!")
+print("Close your eyes, and let your trial begin!")
+print()
+print()
+print()
+print(f'{name} wake up!')
+print("You open your eyes to find that you are enclosed in a tiny room with four walls, a floor, and a ceiling.")
+start = input(" It is sweltering in here. Would you like to [stay] here for eternity or [risk life and limb] to escape?\n>> ")
+if start == "stay":
+    print()
+    print("Eternity is a very long time...")
+    print()
+    response = input("Have you changed your mind? [y/n]: \n>> ")
+    if response == 'y':
+        print("Very well. Let us begin again.")
+        intro()
+    elif response == 'n':
+        print()
+        print("I thought you were open for an adventure? [Ending 1/6 Found]")
