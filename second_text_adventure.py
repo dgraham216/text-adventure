@@ -34,8 +34,8 @@ def intro2():
     print("Option #5: unknown at this point, but you hate to limit your options.")
     firstDecision = input("Which option will you chose? 1/2/3/4/5 \n>> ")
     if firstDecision == '1':
+        print()
         north()
-        
     elif firstDecision == '2':
         print()
         east()
@@ -57,11 +57,32 @@ def north():
         print(' OR do you?')
         print('You remember that you have a single use Rewind Button installed in the middle of your forehead and you smack it - HARD!')
         print('You feel a tug of force from behind, and before you can blink, you find yourself back where you started a few minutes earlier.')
-
+        intro2()
+    elif action == 'n':
+        intro2()
 
 
 def east():
-    print()
+    print('You are at a wall with one ordinary door, but it is fastened shut by three boards screwed horizontally into the door and wall')
+    remove = input('Would you like to use the screwdriver to unscrew the boards? (y/n)\n>> ')
+    if remove == 'y':
+        print('The boards fall to the floor.')
+        open = input('Would you like to open the door?(y/n)\n>> ') 
+        if open == 'y':
+            print('When you turn the nob and tug the door open, you find a rocky volcanic wall that is extremely hot. Sadly, is not a way of escape.')
+            print('You close the door quickly as the steam and heat eminating from the volcanic wall is too much to bear [Dead End 1/1 Found!]')
+            intro2()
+        elif open == 'n':
+            print("Come on. Take a big breath. What's the worst that could happen? Hehehe... ")
+            print('When you turn the knob and tug the door open, you find a rocky volcanic wall that is sizzling hot! Sadly, this is not a way of escape.')
+            print('You close the door quickly as the steam and heat eminating from the volcanic wall is too much to bear [Dead End 1/1 Found!]')
+            intro2()
+    elif remove == 'n':
+        print("Really? Sometimes the obvious choice is the right choice. Let's try this again.")
+        east()
+         
+
+
 
 
 def south():
