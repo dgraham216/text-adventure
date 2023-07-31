@@ -1,26 +1,57 @@
+
+import sys
+import time
+
+a = 2
+b = 0.2
+c = .08
+
+
+
 def intro():
-    print()
+    print('You notice your surroundings.')
+    time.sleep(a)
     print("You stand in the center of a sweltering, tiny room next to a woodburning stove and a backpack")
+    time.sleep(a)
     print("You slowly turn in place")
     print()
+    time.sleep(a)
     print("North wall: has a closed elevator door.  An elevator button next to the door has an engraved arrow pointing down.")
     print()
+    time.sleep(a)
     print("East wall: has one simple wooden door, but the door is blocked by boards screwed horizontally into the door and wall")
     print()
+    time.sleep(a)
     print("South wall: has what looks like a barn door.")
     print()
+    time.sleep(a)
     print("West wall: is completely filled with a black glass window. You can not see out the window.")
     print()
+    time.sleep(a)
     print("Before stepping towards any door or window, you decide to investigate the woodburning stove and the backpack at your feet.")
+    print()
+    time.sleep(a)
     print("You reach out and touch the black iron stove and realize the sweltering heat in the room is not coming from here.")
     print("You open the heavy door of the black iron stove and see unlit kindling and firewood piled inside.")
     print("You note a black pipe rising up from the stove to the ceiling")
     print("It is bolted in place")
+    time.sleep(a)
     print()
     print("Next you investigate the backpack. You pick it up and unbuckle the flap.")
     print("Inside you find a screwdriver, a match, a wrapped piece of your favorite minty bubble gum, and a hammer.")
-    print("Your stomach growls.  You might as well pop in that piece of chewing gum. This might take awhile.")
-    print('You notice the logo on the gum wrapper as you happily chomp away.  It reads "Fresh Breath".')
+    time.sleep(a)
+    print("Your stomach growls.")
+    time.sleep(a)
+    print("You might as well pop in that piece of chewing gum. This escape might take awhile.")
+    print()
+    time.sleep(a)
+    print('You notice the logo on the gum wrapper as you happily chomp away. It reads...')
+    s = '"Fresh Breath"'
+    for word in s:
+        sys.stdout.write(word)
+        sys.stdout.flush()
+        time.sleep(b)
+
     intro2()
 
 
@@ -141,7 +172,7 @@ def fire():
     print('The realization becomes solid in your mind.')
     print('You are in a giant hot air balloon soaring up through the cleaer blue sky!')
     print('You Are Free!!!')
-    ending()
+    ending
 
 def ending():
     print('The wood in the stove quickly burns down to coals, and the balloon gently descends.')
@@ -157,7 +188,12 @@ def closing():
     print("          #                            #")
     print("          #   Thank You For Playing!   #")
     print("          #                            #")
-    print("          ##############################")   
+    print("          ##############################")  
+    print()
+    print()
+    time.sleep(a)
+
+    
 
     
 
@@ -187,20 +223,34 @@ print("          #                            #")
 print("          ##############################")
 print()
 print()
-print()
+time.sleep(a)
 print()
 name = input('Enter your name: ')
 print()
 print()
 print()
+print()
+print()
+print()
 print(f'Salutations {name}!')
+time.sleep(a)
 print("I hope you are game for an adventure!")
+time.sleep(a)
+print()
 print("Close your eyes, and let your trial begin!")
 print()
 print()
 print()
+print()
+print()
+print()
 print(f'{name} wake up!')
+time.sleep(a)
+print()
+print()
 print("You open your eyes to find that you are enclosed in a tiny room with four walls, a floor, and a ceiling.")
+time.sleep(a)
+print()
 start = input(" It is sweltering in here. Would you like to [stay] here for eternity or [risk life and limb] to escape?\n>> ")
 if start == "stay":
     print()
